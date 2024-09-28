@@ -52,7 +52,7 @@ async function processFile() {
           return;
         }
 
-        if (data.snippet) {
+        if (data.releaseyear) {
           // Convert the date string to a Date object
           const eventDate = new Date(data.date);
           // Only process records from 2017 or later
