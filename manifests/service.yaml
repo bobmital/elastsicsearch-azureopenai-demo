@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bobopenaielasticdemo
-  namespace: namespace-workflow-1727555109041
+  name: bobmitalsfo
+  namespace: namespace-workflow-1727556764755
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: bobopenaielasticdemo
+    app: bobmitalsfo
   ports:
     - protocol: TCP
       port: 3000
