@@ -1,12 +1,12 @@
 {
-  "name": "nyc-park-events-demo",
+  "name": "park-events-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mike Richter",
+  "author": "Bob Mital",
   "license": "MIT",
   "dependencies": {
     "@azure/openai": "^1.0.0-beta.11",

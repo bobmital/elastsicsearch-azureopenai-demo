@@ -18,7 +18,7 @@ async function createIndex(indexName) {
     if (!indexExists) {
       // If the index doesn't exist, create it
       await client.indices.create({
-        index: indexName, //"nyc-events-embeddings",
+        index: indexName, //"embeddings",
         body: {
           mappings: {
             properties: {
@@ -57,7 +57,7 @@ async function createIndex(indexName) {
 
 async function addRecord(data, indexName) {
   await client.index({
-    index: indexName, //"nyc-events-embeddings",
+    index: indexName, //"embeddings",
     id: data.event_id,
     document: data,
   });
