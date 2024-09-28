@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bobopenaielasticdemo
+  name: bobmitalsfo
   labels:
-    app: bobopenaielasticdemo
+    app: bobmitalsfo
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1727555109041
+  namespace: namespace-workflow-1727556764755
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bobopenaielasticdemo
+      app: bobmitalsfo
   template:
     metadata:
       labels:
-        app: bobopenaielasticdemo
+        app: bobmitalsfo
     spec:
       containers:
-        - name: bobopenaielasticdemo
-          image: acrworkflow1727555109041.azurecr.io/image-workflow-1727555109041:latest
+        - name: bobmitalsfo
+          image: acrworkflow1727556764755.azurecr.io/image-workflow-1727556764755:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
