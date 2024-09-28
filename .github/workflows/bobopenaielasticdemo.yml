@@ -34,13 +34,13 @@ name: bobopenaielasticdemo
 
 on:
   push:
-    branches: [main]
+    branches: [aks-devhub-dusph]
   workflow_dispatch:
 
 env:
   ACR_RESOURCE_GROUP: openaielasticv1
-  AZURE_CONTAINER_REGISTRY: acrworkflow1727555109041
-  CONTAINER_NAME: image-workflow-1727555109041
+  AZURE_CONTAINER_REGISTRY: bobtest435pm
+  CONTAINER_NAME: image-workflow-1727566346387
   CLUSTER_RESOURCE_GROUP: openaielasticdemo
   CLUSTER_NAME: bobopenaielasticdemo
   DEPLOYMENT_MANIFEST_PATH: |
@@ -48,7 +48,7 @@ env:
     manifests/service.yaml
   DOCKER_FILE: Dockerfile
   BUILD_CONTEXT_PATH: ./
-  NAMESPACE: namespace-workflow-1727555109041
+  NAMESPACE: bobtest435pm
 
 jobs:
   buildImage:
