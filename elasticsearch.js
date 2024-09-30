@@ -18,7 +18,7 @@ async function createIndex(indexName) {
     if (!indexExists) {
       // If the index doesn't exist, create it
       await client.indices.create({
-        index: indexName, //"embeddings",
+        index: indexName, //"nyc-events-embeddings",
         body: {
           mappings: {
             properties: {
@@ -27,20 +27,8 @@ async function createIndex(indexName) {
               content: { type: "text" },
               contentHtml: { type: "text" },
               date: { type: "date" },
-              releaseyear: { type: "text" },
-              locations: { type: "text" },
-              funfacts: { type: "text" },
-              productioncompany: { type: "text" },
-              distributor: { type: "distribtextutor" },
-              director: { type: "text" },
-              writer: { type: "text" },
-              actor1: { type: "text" },
-              actor2: { type: "text" },
-              actor3: { type: "text" },
-              sffindneighborhoods: { type: "text" },
-              analysisneighborhoods: { type: "text" },
-              currentsupervisordistricts: { type: "text" },
-              
+              location_description: { type: "text" },
+              snippet: { type: "text" },
               embedding: { type: "dense_vector", dims: 1536 }, // ada-002 model produces 1024-dimensional embeddings
             },
           },
@@ -57,7 +45,7 @@ async function createIndex(indexName) {
 
 async function addRecord(data, indexName) {
   await client.index({
-    index: indexName, //"embeddings",
+    index: indexName, //"nyc-events-embeddings",
     id: data.event_id,
     document: data,
   });
